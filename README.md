@@ -3,7 +3,7 @@ This TCP client connects to dump1090. It decodes ADS-B messages in base station 
 
 SBS1 messages are in simple comma separated format and end with the "end of line" character. Therefore this TCP client reads data per line and not just any number of bytes:
 
-```
+```rust
 // Create buffered reader from TcpStream
 let mut reader = BufReader::new(stream);
 
